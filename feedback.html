@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<title></title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link href="../homepage/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper">
+
+	<header class="header">
+		<img src="../homepage/template/header1.jpg" width="978" height="150" alt="header"></header><!-- .header-->
+
+<ul>
+ <li><a href="../homepage/homepage.html">Startseite</a></li>
+  <li><a href="../homepage/projekt.html">Das Projekt</a></li>
+  <li><a href="../homepage/wohnstandortsuche.html">Wohnstandortsuche</a></li>
+    <li><a href="../intranet/link.html">Intranet</a></li>
+        <li><a href="../homepage/impressum.html">Impressum</a></li>
+  <li><a href="../Database/feedback.php">Feedback</a></li>
+</ul>
+	<main class="content">
+		
+<h2>Feedback-Formular für Gruppe 9</h2>
+
+<form method="POST" action="feedback_send_09.php">
+  <input type="radio" name="geschlecht" value="Frau"/> Frau
+  <input type="radio" name="geschlecht" value="Herr"/> Herr<br />
+  <table>
+    <tr><td>Vorname:</td>
+       <td><input type="text" name="vname" size="50" /></td>
+    </tr>
+     <tr><td>Nachname:</td>
+       <td><input type="text" name="nname" size="50" /></td>
+    </tr>
+    <tr><td>E-Mail: </td>
+       <td><input type="text" name="email" size="50" /></td>
+    </tr>
+  </table>
+  Feedback: <br />
+  <textarea name="message" rows="10" cols="50"></textarea>
+  <br />
+  <input type="checkbox" name="team" checked="checked" value="ON" />
+         Ich bin Mitglied des geoweb-Teams <br /><br />
+  <input type="submit" value="Abschicken">
+  <input type="reset" value="Zurücksetzen"> <br /><br />
+  Ihr Feedback wird per E-Mail an die Autoren/innen zugestellt<br>
+  und in der Projekt-Datenbank gespeichert.<br /><br />
+  <br />
+</form>
+
+<p>geoweb.m10 (JB), Beispiel ausgehend von<br />
+<a href="http://www.thesitewizard.com/archive/feedbackphp.shtml" 
+target="_blank"> PHP Tutorial: Feedback Form Script</a> </p>
+</main><!-- .content -->
+
+</div><!-- .wrapper -->
+
+<footer class="footer">
+	<strong>Footer:</strong> Mus elit Morbi mus enim lacus at quis Nam eget morbi. Et semper urna urna non at cursus dolor vestibulum neque enim. Tellus interdum at laoreet laoreet lacinia lacinia sed Quisque justo quis. Hendrerit scelerisque lorem elit orci tempor tincidunt enim Phasellus dignissim tincidunt. Nunc vel et Sed nisl Vestibulum odio montes Aliquam volutpat pellentesque. Ut pede sagittis et quis nunc gravida porttitor ligula.
+</footer><!-- .footer -->
+
+</body>
+</html>
