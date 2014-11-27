@@ -57,7 +57,7 @@
         xhr.open("GET", url, true);
         xhr.onload = function() {
           var result = JSON.parse(xhr.responseText);
-          var position = /** @type {ol.Coordinate} */ [parseFloat(result[0].lon, result[0].lat)];
+          var position = /** @type {ol.Coordinate} */ [parseFloat(result[0].lon), parseFloat(result[0].lat)];
           map.getView().setCenter(ol.proj.transform(position, 'EPSG:4326', 'EPSG:3857'));
         };
         xhr.send();
