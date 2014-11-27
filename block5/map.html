@@ -2,13 +2,23 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="ol3/ol.css" type="text/css">
-    <style>
-    #map {
-      background-color: gray;
-      height: 256px;
-      width: 512px;
+   style: (function() {
+  var defaultStyle = [new ol.style.Style({
+    fill: new ol.style.Fill({color: 'navy'}),
+    stroke: new ol.style.Stroke({color: 'black', width: 1})
+  })];
+  var ruleStyle = [new ol.style.Style({
+    fill: new ol.style.Fill({color: 'olive'}),
+    stroke: new ol.style.Stroke({color: 'black', width: 1})
+  })];
+  return function(feature, resolution) {
+    if (feature.get('shape_area') < 3000) {
+      return ruleStyle;
+    } else {
+      return defaultStyle;
     }
-    </style>
+  };
+})()
     <title>OpenLayers 3 example</title>
     <script src="ol3/ol.js" type="text/javascript"></script>
   </head>
