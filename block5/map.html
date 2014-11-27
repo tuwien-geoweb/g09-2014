@@ -26,6 +26,15 @@
         </form>
         <form action="input_button.htm">
   <p>
+  <script type="text/javascript">
+    function one(){
+      geolocation.setTracking(true); // here the browser may ask for confirmation
+      geolocation.on('change:position', function() {
+        geolocation.setTracking(false);
+        map.getView().setCenter(geolocation.getPosition());
+        marker.setGeometry(new ol.geom.Point(map.getView.get.Center()));
+      })}
+  </script>
     <input type="button" name="Text 1" value="Text 1 anzeigen"
       onclick="one">
  </p>
@@ -57,14 +66,9 @@
       var geolocation = new ol.Geolocation({
         projection: 'EPSG:3857'
       });
-      function one(){
-      geolocation.setTracking(true); // here the browser may ask for confirmation
-      geolocation.on('change:position', function() {
-        geolocation.setTracking(false);
-        map.getView().setCenter(geolocation.getPosition());
-        marker.setGeometry(new ol.geom.Point(map.getView.get.Center()));
-      });
-      }
+      
+      
+      
       var form = document.getElementById("search");
       form.onsubmit = function(evt) {
         evt.preventDefault();
