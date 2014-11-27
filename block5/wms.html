@@ -30,8 +30,7 @@
         target: 'map',
         layers: [
           new ol.layer.Tile({
-            source: new ol.source.MapQuest({layer: 'sat'}),
-		  new ol.layer.source.TileWMS({
+            source: new ol.layer.source.TileWMS({
 		  url: 'http://student.ifip.tuwien.ac.at/geoserver/wms',
 		  params: {LAYERS: 'ifip_2014:feedback',TRANSPARENT: true, FORMAT: 'image/png' }
 })
