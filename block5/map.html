@@ -24,8 +24,15 @@
         <form id="search">
           Search: <input name="query" type="text" size="40">
         </form>
-        <input type="button" name="Text 2" value="Text 2 anzeigen"
-      onclick="">
+        <form action="input_button.htm">
+  <p>
+    <textarea cols="20" rows="4" name="textfeld"></textarea>
+    <input type="button" name="Text 1" value="Text 1 anzeigen"
+      onclick="this.form.textfeld.value='Text 1 und rückwärts seltsam geschrieben ich bin.'">
+    <input type="button" name="Text 2" value="Text 2 anzeigen"
+      onclick="this.form.textfeld.value='Ich bin Text 2 - ganz normal'">
+  </p>
+</form>
   </p>
       </div>
     </div>
