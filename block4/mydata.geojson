@@ -1,0 +1,51 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Stefan Gregorides"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.323838233947754,
+          48.21467922757124
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.331090927124023,
+          48.21231998069733
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.340478658676147,
+          48.241381180590615
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.37307286262512,
+          48.19049536996861
+        ]
+      }
+    }
+  ]
+}
