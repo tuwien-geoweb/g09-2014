@@ -26,12 +26,9 @@
         </form>
         <form action="input_button.htm">
   <p>
-    <textarea cols="20" rows="4" name="textfeld"></textarea>
     <input type="button" name="Text 1" value="Text 1 anzeigen"
-      onclick="this.form.textfeld.value='Text 1 und rückwärts seltsam geschrieben ich bin.'">
-    <input type="button" name="Text 2" value="Text 2 anzeigen"
-      onclick="this.form.textfeld.value='Ich bin Text 2 - ganz normal'">
-  </p>
+      onclick="one">
+ </p>
 </form>
   </p>
       </div>
@@ -60,13 +57,14 @@
       var geolocation = new ol.Geolocation({
         projection: 'EPSG:3857'
       });
+      function one(){
       geolocation.setTracking(true); // here the browser may ask for confirmation
       geolocation.on('change:position', function() {
         geolocation.setTracking(false);
         map.getView().setCenter(geolocation.getPosition());
         marker.setGeometry(new ol.geom.Point(map.getView.get.Center()));
       });
-      
+      }
       var form = document.getElementById("search");
       form.onsubmit = function(evt) {
         evt.preventDefault();
