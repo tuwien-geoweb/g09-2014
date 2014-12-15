@@ -5,7 +5,7 @@ var osmLayer = new ol.layer.Tile({source: new ol.source.OSM()});
 var wmsLayer = new ol.layer.Image({
   source: new ol.source.ImageWMS({
     url: 'http://student.ifip.tuwien.ac.at/geoserver/wms',
-    params: {'LAYERS': 'ifip_2014:normalized,ifip_2014:comments'}
+    params: {'LAYERS': 'g09_2014:normalized_wien'}
   }),
   opacity: 0.6
 });
@@ -16,8 +16,8 @@ olMap = new ol.Map({
   renderer: 'canvas',
   layers: [osmLayer, wmsLayer],
   view: new ol.View({
-    center: [-10764594.0, 4523072.0],
-    zoom: 5,
+    center: ol.proj.transform([16.37, 48.21], 'EPSG:4326', 'EPSG:3857'),
+    zoom: 11,
     maxZoom: 18
   })
 });
