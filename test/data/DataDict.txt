@@ -16,7 +16,7 @@ POP_TOTAL   Einwohner gesamt                                                    
 POP_MEN     Einwohner männlich                                                                                       PCT    1            2.4         0.0        29.5  CENSUS
 POP_WOMEN   Einwohner weiblich                                                                                       PCT    1           16.9         0.2        95.6  CENSUS
 POP_NATIVE  Innländer                                                                                                PCT    1           63.0         3.2        98.6  CENSUS
-POP_FOREIGN Bewohner mit Migrationshinter                                                                            PCT    1           84.6        49.0       100.0  CENSUS
+POP_FOREIGN Bewohner mit Migrationshintergrund                                                                            PCT    1           84.6        49.0       100.0  CENSUS
 WHG_AUSST_A Wohnungskategorie A                                                                                      PCT    1           12.8         0.0        63.4  CENSUS
 WHG_AUSST_B Wohnungskategorie B                                                                                      PCT    1           20.3         0.0        95.9  CENSUS
 WHG_AUSST_C Wohnungskategorie C                                                                                      PCT    1           85.4        46.3        98.6  CENSUS
