@@ -1,8 +1,8 @@
 Data_Item                                             Item_Description                                             UnitDecimal  US_Total    Minimum     Maximum     Source
 STATECOU  FIPS State and County code
-PST045212 Resident total population estimate (July 1) 2012                                                         ABS    0      313914040          71   313914040  CENSUS
-PST040210 Resident total population, estimates base (April 1) 2010                                                 ABS    0      308747508          82   308747508  CENSUS
-PST120212 Resident total population, percent change - April 1, 2010 to July 1, 2012                                PCT    1            1.7       -18.1        25.6  CENSUS
+AGE_00_02 Altersklasse 1 von 0 bis 2 Jahre                                                                         ABS    0      313914040          71   313914040  CENSUS
+AGE_03_05 Altersklasse 2 von 3 bis 5 Jahre                                                                         ABS    0      308747508          82   308747508  CENSUS
+AGE_06_09 Altersklasse 3 von 6 bis 9 Jahre                                                                         PCT    1            1.7       -18.1        25.6  CENSUS
 POP010210 Resident population (April 1 - complete count) 2010                                                      ABS    0      308745538          82   308745538  CENSUS
 AGE135212 Resident population under 5 years, percent, 2012                                                         PCT    1            6.4         0.0        13.3  CENSUS
 AGE295212 Resident population under 18 years, percent, 2012                                                        PCT    1           23.5         0.0        41.4  CENSUS
