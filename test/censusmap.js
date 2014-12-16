@@ -5,7 +5,7 @@ var osmLayer = new ol.layer.Tile({source: new ol.source.OSM()});
 var wmsLayer = new ol.layer.Image({
   source: new ol.source.ImageWMS({
     url: 'http://student.ifip.tuwien.ac.at/geoserver/wms',
-    params: {'LAYERS': 'g09_2014:normalized_wien'}
+    params: {'LAYERS': 'g09_2014:Wien_normalized_5'}
   }),
   opacity: 0.6
 });
