@@ -23,7 +23,7 @@ olMap = new ol.Map({
 });
 
 // Load variables into dropdown
-$.get("Data/DataDict.txt", function(response) {
+$.get("data/DataDict.txt", function(response) {
   // We start at line 3 - line 1 is column names, line 2 is not a variable
   $(response.split('\n').splice(2)).each(function(index, line) {
     $('#topics').append($('<option>')
