@@ -22,29 +22,21 @@ olMap = new ol.Map({
   })
 });
 
-// Add behaviour to dropdown
-var topics = document.getElementById('topics');
-topics.onchange = function() {
-  wmsLayer.getSource().updateParams({
-    'viewparams': 'column:' + topics.options[topics.selectedIndex].value
-  });
-};
-
 // Load variables into dropdown
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "data/datadict.txt");
-xhr.onload = function() {
-  var lines = xhr.responseText.split('\n');
-  
-// We start at line 3 - line 1 is column names, line 2 is not a variable
-  for (var i = 2, ii = lines.length; i < ii; ++i) {
-    var option = document.createElement('option');
-    option.value = lines[i].substr(0, 10).trim();
-    option.innerHTML = lines[i].substr(10, 105).trim();
-    topics.appendChild(option);
-  }
-};
-xhr.send();
+$.get("Data/DataDict.txt", function(response) {
+  // We start at line 3 - line 1 is column names, line 2 is not a variable
+  $(response.split('\n').splice(2)).each(function(index, line) {
+    $('#topics').append($('<option>')
+      .val(line.substr(0, 10).trim())
+      .html(line.substr(10, 105).trim()));
+  });
+});
+// Add behaviour to dropdown
+$('#topics').change(function() {
+  wmsLayer.getSource().updateParams({
+    'viewparams': 'column:' + $('#topics>option:selected').val()
+  });
+});
 
 // Create an ol.Overlay with a popup anchored to the map
 var popup = new ol.Overlay({
