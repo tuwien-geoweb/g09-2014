@@ -10,6 +10,20 @@ var wmsLayer = new ol.layer.Image({
   opacity: 0.6
 });
 
+var citybike = new ol.layer.Vector({
+  source: new ol.source.Vector({
+    url: 'http://student.ifip.tuwien.ac.at/geoserver/g09_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g09_2014:CITYBIKE&maxFeatures=50&outputFormat=json',
+    parser: new ol.parser.GeoJSON()
+  }),
+            style: new ol.style.Style({
+                     symbolizers: [
+               new ol.style.Icon({
+                        url: 'data/city.png',
+                 })
+                  ]
+            })
+}); 
+
 // Map object
 olMap = new ol.Map({
   target: 'map',
@@ -21,5 +35,13 @@ olMap = new ol.Map({
     maxZoom: 18
   })
 });
+
+document.getElementById('citybike').onclick = function(e){
+  if(this.checked==1){
+    olMap.addLayer(citybike);
+  }else{
+    olMap.removeLayer(citybike);
+  }
+};
 
 
