@@ -103,6 +103,15 @@ var citybike = new ol.layer.Vector({
   url: 'http://student.ifip.tuwien.ac.at/geoserver/g09_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g09_2014:CITYBIKE&maxFeatures=50&outputFormat=json',
   projection: 'EPSG:3857'
 }),
+   style: new ol.style.Style({
+  image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
+    anchor: [0.5, 46],
+    anchorXUnits: 'fraction',
+    anchorYUnits: 'pixels',
+    opacity: 0.75,
+    src: 'data/city.png'
+  }));
+   });
 }); 
 
 
