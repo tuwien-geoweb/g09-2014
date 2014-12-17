@@ -100,7 +100,7 @@ form.onsubmit = function(evt) {
 //Citybike Layer
 var citybike = new ol.layer.Vector({
   source: new ol.source.Vector({
-    url: 'http://student.ifip.tuwien.ac.at/geoserver/g09_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g09_2014:CITYBIKE&outputFormat=json',
+    url: 'http://student.ifip.tuwien.ac.at/geoserver/g09_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g09_2014:CITYBIKE&maxFeatures=50&outputFormat=json',
     parser: new ol.parser.GeoJSON()
   }),
             style: new ol.style.Style({
