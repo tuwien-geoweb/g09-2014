@@ -96,3 +96,27 @@ form.onsubmit = function(evt) {
   xhr.send();
   evt.preventDefault();
 };
+
+//Citybike Layer
+var citybike = new ol.layer.Vector({
+  source: new ol.source.Vector({
+    url: 'http://student.ifip.tuwien.ac.at/geoserver/g09_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g09_2014:CITYBIKE&outputFormat=json',
+    parser: new ol.parser.GeoJSON()
+  }),
+            style: new ol.style.Style({
+                     symbolizers: [
+               new ol.style.Icon({
+                        url: '../../symbole/city.png',
+                 })
+                  ]
+            })
+}); 
+
+//onclick function
+document.getElementById('citybike').onclick = function(e){
+  if(this.checked==1){
+    olMap.addLayer(citybike);
+  }else{
+    olMap.removeLayer(citybike);
+  }
+};
