@@ -112,6 +112,7 @@ var citybike = new ol.layer.Vector({
             })
 }); 
 
+olMap.addLayer(citybike);
 //onclick function
 document.getElementById('citybike').onclick = function(e){
   if(this.checked==1){
