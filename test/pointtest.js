@@ -103,13 +103,6 @@ var citybike = new ol.layer.Vector({
   url: 'http://student.ifip.tuwien.ac.at/geoserver/g09_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g09_2014:CITYBIKE&maxFeatures=50&outputFormat=json',
   projection: 'EPSG:3857'
 }),
-style: new ol.style.Style({
-                     symbolizers: [
-               new ol.style.Icon({
-			url: 'http://tuwien-geoweb.github.io/g09-2014/test/data/city.png',
-		       })
-                  ]
-            })
 }); 
 
 
