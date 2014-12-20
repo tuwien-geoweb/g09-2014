@@ -109,7 +109,7 @@ var citybike = new ol.layer.Vector({
           url: 'data/bike.png',
         })
       ]
-    });
+    })
 }); 
 
 
