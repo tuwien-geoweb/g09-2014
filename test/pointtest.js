@@ -104,7 +104,7 @@ var citybike = new ol.layer.Vector({
   projection: 'EPSG:3857'
 }),
 fill: new ol.style.Fill({
-    color: 'blue'
+    color: 'red'
   }),
   stroke: new ol.style.Stroke({
     color: 'olive',
