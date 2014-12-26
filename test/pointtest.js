@@ -120,4 +120,26 @@ document.getElementById('citybike').onclick = function(e){
   }
 };
 
+var spielplatz = new ol.layer.Vector({
+  source: new ol.source.GeoJSON({
+  url: 'http://student.ifip.tuwien.ac.at/geoserver/g09_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g09_2014:SPIELPLATZ&maxFeatures=50&outputFormat=json',
+  projection: 'EPSG:3857'
+}),
+ style: new ol.style.Style({
+       image: new ol.style.Icon({
+          src: 'data/spiel.png',
+        })
+      
+    })
+}); 
+
+
+document.getElementById('spielplatz').onclick = function(e){
+  if(this.checked==1){
+    olMap.addLayer(spielplatz);
+  }else{
+    olMap.removeLayer(spielplatz);
+  }
+};
+
 
