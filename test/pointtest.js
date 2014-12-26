@@ -104,8 +104,7 @@ var citybike = new ol.layer.Vector({
   projection: 'EPSG:3857'
 }),
  style: new ol.style.Style({
-      image: 
-        new ol.style.Image({
+       image: new ol.style.Icon({
           url: 'data/city.png',
         })
       
