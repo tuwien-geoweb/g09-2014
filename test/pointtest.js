@@ -105,7 +105,7 @@ var citybike = new ol.layer.Vector({
 }),
  style: new ol.style.Style({
        image: new ol.style.Icon({
-          url: 'data/city.png',
+          src: 'data/city.png',
         })
       
     })
