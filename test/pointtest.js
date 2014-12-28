@@ -233,7 +233,7 @@ var ubahn = new ol.layer.Vector({
 }),
  style: new ol.style.Style({
        image: new ol.style.Icon({
-          src: 'data/city.png',
+          src: 'data/ubahn.png',
         })
       
     })
