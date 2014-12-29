@@ -13,18 +13,6 @@
     <script src="http://openlayers.org/en/v3.0.0/build/ol.js" type="text/javascript"></script>
     <!-- Our Application -->
   
-    <script type="text/javascript">
-     var geolocation = new ol.Geolocation({
-     projection: 'EPSG:3857'
-     });
-    function one(){
-    geolocation.setTracking(true); // here the browser may ask for confirmation
-    geolocation.on('change:position', function() {
-     geolocation.setTracking(false);
-    map.getView().setCenter(geolocation.getPosition());
-    })}
-
-    </script>
     <style>
       html, body,{
         height: 500px;
