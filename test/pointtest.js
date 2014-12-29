@@ -268,5 +268,14 @@ document.getElementById('wcanlage').onclick = function(e){
   }
 };
 
+var geolocation = new ol.Geolocation({
+        projection: 'EPSG:3857'
+      });
+            geolocation.setTracking(true); // here the browser may ask for confirmation
+      geolocation.on('change:position', function() {
+        geolocation.setTracking(false);
+        map.getView().setCenter(geolocation.getPosition());
+        marker.setGeometry(new ol.geom.Point(map.getView().getCenter()));
+      });
 
 
