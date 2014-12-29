@@ -100,7 +100,7 @@ form.onsubmit = function(evt) {
 
 var citybike = new ol.layer.Vector({
   source: new ol.source.GeoJSON({
-  url: 'http://student.ifip.tuwien.ac.at/geoserver/g09_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g09_2014:CITYBIKE&maxFeatures=50&outputFormat=json',
+  url: 'http://student.ifip.tuwien.ac.at/geoserver/g09_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g09_2014:CITYBIKE&maxFeatures=150&outputFormat=json',
   projection: 'EPSG:3857'
 }),
  style: new ol.style.Style({
@@ -122,7 +122,7 @@ document.getElementById('citybike').onclick = function(e){
 
 var spielplatz = new ol.layer.Vector({
   source: new ol.source.GeoJSON({
-  url: 'http://student.ifip.tuwien.ac.at/geoserver/g09_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g09_2014:SPIELPLATZ&maxFeatures=50&outputFormat=json',
+  url: 'http://student.ifip.tuwien.ac.at/geoserver/g09_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g09_2014:SPIELPLATZ&maxFeatures=150&outputFormat=json',
   projection: 'EPSG:3857'
 }),
  style: new ol.style.Style({
@@ -144,7 +144,7 @@ document.getElementById('spielplatz').onclick = function(e){
 
 var hundesackerl = new ol.layer.Vector({
   source: new ol.source.GeoJSON({
-  url: 'http://student.ifip.tuwien.ac.at/geoserver/g09_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g09_2014:HUNDESACKERL&maxFeatures=50&outputFormat=json',
+  url: 'http://student.ifip.tuwien.ac.at/geoserver/g09_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g09_2014:HUNDESACKERL&maxFeatures=150&outputFormat=json',
   projection: 'EPSG:3857'
 }),
  style: new ol.style.Style({
@@ -165,7 +165,7 @@ document.getElementById('hundesackerl').onclick = function(e){
 
 var kindergarten = new ol.layer.Vector({
   source: new ol.source.GeoJSON({
-  url: 'http://student.ifip.tuwien.ac.at/geoserver/g09_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g09_2014:KINDERGARTEN&maxFeatures=50&outputFormat=json',
+  url: 'http://student.ifip.tuwien.ac.at/geoserver/g09_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g09_2014:KINDERGARTEN&maxFeatures=150&outputFormat=json',
   projection: 'EPSG:3857'
 }),
  style: new ol.style.Style({
@@ -186,7 +186,7 @@ document.getElementById('kindergarten').onclick = function(e){
 
 var oeffgruen = new ol.layer.Vector({
   source: new ol.source.GeoJSON({
-  url: 'http://student.ifip.tuwien.ac.at/geoserver/g09_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g09_2014:OEFFGRUEN&maxFeatures=50&outputFormat=json',
+  url: 'http://student.ifip.tuwien.ac.at/geoserver/g09_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g09_2014:OEFFGRUEN&maxFeatures=150&outputFormat=json',
   projection: 'EPSG:3857'
 }),
  style: new ol.style.Style({
@@ -207,7 +207,7 @@ document.getElementById('oeffgruen').onclick = function(e){
 
 var schule = new ol.layer.Vector({
   source: new ol.source.GeoJSON({
-  url: 'http://student.ifip.tuwien.ac.at/geoserver/g09_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g09_2014:SCHULE&maxFeatures=50&outputFormat=json',
+  url: 'http://student.ifip.tuwien.ac.at/geoserver/g09_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g09_2014:SCHULE&maxFeatures=150&outputFormat=json',
   projection: 'EPSG:3857'
 }),
  style: new ol.style.Style({
@@ -228,7 +228,7 @@ document.getElementById('schule').onclick = function(e){
 
 var ubahn = new ol.layer.Vector({
   source: new ol.source.GeoJSON({
-  url: 'http://student.ifip.tuwien.ac.at/geoserver/g09_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g09_2014:UBAHN&maxFeatures=50&outputFormat=json',
+  url: 'http://student.ifip.tuwien.ac.at/geoserver/g09_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g09_2014:UBAHN&maxFeatures=150&outputFormat=json',
   projection: 'EPSG:3857'
 }),
  style: new ol.style.Style({
@@ -249,7 +249,7 @@ document.getElementById('ubahn').onclick = function(e){
 
 var wcanlage = new ol.layer.Vector({
   source: new ol.source.GeoJSON({
-  url: 'http://student.ifip.tuwien.ac.at/geoserver/g09_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g09_2014:WCANLAGE&maxFeatures=50&outputFormat=json',
+  url: 'http://student.ifip.tuwien.ac.at/geoserver/g09_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g09_2014:WCANLAGE&maxFeatures=150&outputFormat=json',
   projection: 'EPSG:3857'
 }),
  style: new ol.style.Style({
