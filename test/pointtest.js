@@ -263,28 +263,14 @@ document.getElementById('wcanlage').onclick = function(e){
   }
 };
 
- var marker = new ol.Feature();
-var map = new ol.Map({
-target: 'map',
-layers: [
-new ol.layer.Tile({
-source: new ol.source.MapQuest({layer: 'osm'})
-}),
-new ol.layer.Vector({
-source: new ol.source.Vector({
-features: [marker]
-})
-})
-],
+function one(){    // damit uber den Button aus aufrufbar
 
-var geolocation = new ol.Geolocation({
-        projection: 'EPSG:3857'
-      });
-            geolocation.setTracking(true); // here the browser may ask for confirmation
-      geolocation.on('change:position', function() {
-        geolocation.setTracking(false);
-        map.getView().setCenter(geolocation.getPosition());
-        marker.setGeometry(new ol.geom.Point(map.getView().getCenter()));
-      });
+var geolocation = new ol.Geolocation();     
+geolocation.bindTo('projection', view);
+geolocation.setTracking(true); 
+geolocation.on('change:position', function setPosition() {
+  olMap.getView().setCenter(geolocation.getPosition())
+});
 
+}
 
