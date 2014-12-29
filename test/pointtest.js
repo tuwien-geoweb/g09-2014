@@ -269,3 +269,12 @@ document.getElementById('wcanlage').onclick = function(e){
 };
 
 
+function one(){
+geolocation.setTracking(true); // here the browser may ask for confirmation
+geolocation.on('change:position', function() {
+geolocation.setTracking(false);
+map.getView().setCenter(geolocation.getPosition());
+})}
+
+
+
