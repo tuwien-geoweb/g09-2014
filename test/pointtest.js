@@ -268,7 +268,9 @@ document.getElementById('wcanlage').onclick = function(e){
   }
 };
 
-
+var geolocation = new ol.Geolocation({
+projection: 'EPSG:3857'
+});
 function one(){
 geolocation.setTracking(true); // here the browser may ask for confirmation
 geolocation.on('change:position', function() {
