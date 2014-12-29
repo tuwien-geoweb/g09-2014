@@ -268,6 +268,20 @@ document.getElementById('wcanlage').onclick = function(e){
   }
 };
 
+ var marker = new ol.Feature();
+var map = new ol.Map({
+target: 'map',
+layers: [
+new ol.layer.Tile({
+source: new ol.source.MapQuest({layer: 'osm'})
+}),
+new ol.layer.Vector({
+source: new ol.source.Vector({
+features: [marker]
+})
+})
+],
+
 var geolocation = new ol.Geolocation({
         projection: 'EPSG:3857'
       });
