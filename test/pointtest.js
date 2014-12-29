@@ -263,6 +263,11 @@ document.getElementById('wcanlage').onclick = function(e){
   }
 };
 
+var view = new ol.View2D({center: ol.proj.transform([16.37, 48.21], 'EPSG:4326', 'EPSG:3857'),
+    zoom: 12,
+    maxZoom: 18
+    });
+
 function one(){    // damit uber den Button aus aufrufbar
 
 var geolocation = new ol.Geolocation();     
