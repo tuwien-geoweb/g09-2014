@@ -280,3 +280,8 @@ function current_location() {
     //marker.setGeometry(new ol.geom.Point(olMap.getView().getCenter()));
   });
 }
+
+function vienna(){
+  olMap.getView().setCenter(ol.proj.transform([16.37, 48.21], 'EPSG:4326', 'EPSG:3857'));
+  olMap.getView().setZoom(10);
+};
