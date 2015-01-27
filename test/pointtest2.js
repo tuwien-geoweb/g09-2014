@@ -268,3 +268,15 @@ document.getElementById('wcanlage').onclick = function(e){
   }
 };
 
+function current_location() {
+  var geolocation = new ol.Geolocation({
+    projection: 'EPSG:3857'
+  });
+  geolocation.setTracking(true); // here the browser may ask for confirmation // das passt noch nicht so ganz
+  geolocation.on('change:position', function() {
+    geolocation.setTracking(false);
+    olMap.getView().setCenter(geolocation.getPosition());
+    olMap.getView().setZoom(18);
+    //marker.setGeometry(new ol.geom.Point(olMap.getView().getCenter()));
+  });
+}
