@@ -212,7 +212,7 @@ var schule = new ol.layer.Vector({
 }),
  style: new ol.style.Style({
        image: new ol.style.Icon({
-          src: 'data/schule.png',
+          src: 'data/schulen.png',
         })
       
     })
